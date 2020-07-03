@@ -1,16 +1,22 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <Navigator />
+    <router-view :key="$route.path"/>
   </div>
 </template>
 
+<script>
+import Navigator from "@/components/Navigator";
+export default {
+  components: {
+    Navigator
+  }
+}
+</script>
+
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family:'Nunito', Helvetica, Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -24,6 +30,7 @@
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  padding: 0 2%;
 }
 
 #nav a.router-link-exact-active {
