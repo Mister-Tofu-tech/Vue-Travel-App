@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Navigator />
-    <router-view :key="$route.path"/>
+    <router-view :key="$route.path" />
   </div>
 </template>
 
@@ -9,14 +9,14 @@
 import Navigator from "@/components/Navigator";
 export default {
   components: {
-    Navigator
-  }
-}
+    Navigator,
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family:'Nunito', Helvetica, Arial;
+  font-family: "Nunito", Helvetica, Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -29,6 +29,7 @@ export default {
 
 #nav a {
   font-weight: bold;
+  font-size: 20px;
   color: #2c3e50;
   padding: 0 2%;
 }
